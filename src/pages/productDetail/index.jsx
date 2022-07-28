@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import getProduct from '../../services/products';
+import { getProduct } from '../../services/products';
 
 function ProductDetail() {
 	const [product, setProduct] = useState({});
@@ -14,10 +14,16 @@ function ProductDetail() {
 	}, []);
 	return (
 		<div>
-			<img src={product.image} alt='' />
-			<h1>{`Name: ${product.title}`}</h1>
-			<h2>{`Status: ${product.price}`}</h2>
-			<h2>{`Species: ${product.description}`}</h2>
+			{product ? (
+				<>
+					<img src={product.image} alt='' />
+					<h1>{`Name: ${product.title}`}</h1>
+					<h2>{`Status: ${product.price}`}</h2>
+					<h2>{`Species: ${product.description}`}</h2>
+				</>
+			) : (
+				<p>Loading...</p>
+			)}
 		</div>
 	);
 }
