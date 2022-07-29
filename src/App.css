@@ -4,7 +4,7 @@
 	width: auto;
 	text-align: center
 }
-.home_productCard {
+.home_productCard, .detail_productCard, .about_container {
 	text-align: center;
 	box-shadow: 10px;
 	height: auto;
@@ -18,9 +18,28 @@
 	margin-top: 10px;
 	padding: 10px;
 }
-.home_productCard_image {
+.home_productCard_image, .detail_productCard_image, .about_image {
 	width: auto;
 	height: auto;
+	min-height: 100px;
+	min-width: 100px;
 	max-width: 200px;
 	max-height: 200px;
+}
+.about_container {
+	text-align: center;
+	box-shadow: 10px;
+	height: auto;
+	width: auto;
+	max-width: 500px;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	padding: 10px;
+}
+.header__nav {
+	text-align: center;
 }

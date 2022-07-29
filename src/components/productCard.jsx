@@ -6,11 +6,7 @@ function ProductCard({ product }) {
 		<div className='home_productCard'>
 			<img src={product.image} alt='' className='home_productCard_image' />
 			<h2>{product.title}</h2>
-			<Link
-				to={`/products/${product.id}`}
-				rel='nofollow noopener noreferrer'
-				target='_blank'
-			>
+			<Link to={`/products/${product.id}`}>
 				<button type='button' className=''>
 					Go to Detail
 				</button>

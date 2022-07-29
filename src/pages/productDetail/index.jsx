@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getProduct } from '../../services/products';
+import NavBar from '../../components/navBar';
 
 function ProductDetail() {
 	const [product, setProduct] = useState({});
@@ -11,19 +12,27 @@ function ProductDetail() {
 			setProduct(result);
 		};
 		fetchData();
-	}, []);
+	}, [product]);
 	return (
 		<div>
-			{product ? (
-				<>
-					<img src={product.image} alt='' />
-					<h1>{`Name: ${product.title}`}</h1>
-					<h2>{`Status: ${product.price}`}</h2>
-					<h2>{`Species: ${product.description}`}</h2>
-				</>
-			) : (
-				<p>Loading...</p>
-			)}
+			<NavBar />
+			<div className='detail_productCard'>
+				{product.title !== undefined ? (
+					<>
+						<img
+							src={product.image}
+							alt=''
+							className='detail_productCard_image'
+						/>
+						<h1>{`Product: ${product.title}`}</h1>
+						<h2>{`Price: $${product.price}`}</h2>
+						<h2>{`Category: ${product.category}`}</h2>
+						<h2>{`Description: ${product.description}`}</h2>
+					</>
+				) : (
+					<p>Loading...</p>
+				)}
+			</div>
 		</div>
 	);
 }
