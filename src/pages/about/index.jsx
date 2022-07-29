@@ -6,7 +6,7 @@ function About() {
 			<NavBar />
 			<div className='about_container'>
 				<img
-					src='../../assets/perfil.png'
+					src='./perfil.png'
 					alt='Web Designer Profile pic'
 					className='about_image'
 				/>
