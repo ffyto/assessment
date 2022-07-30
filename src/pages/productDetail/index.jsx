@@ -25,8 +25,13 @@ function ProductDetail() {
 							className='detail_productCard_image'
 						/>
 						<h1>{`Product: ${product.title}`}</h1>
+						<br />
 						<h2>{`Price: $${product.price}`}</h2>
+						<br />
+						<br />
 						<h2>{`Category: ${product.category}`}</h2>
+						<br />
+						<br />
 						<h2>{`Description: ${product.description}`}</h2>
 					</>
 				) : (
