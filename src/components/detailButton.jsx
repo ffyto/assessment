@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function DetailButton({ product }) {
+function DetailButton({ product, remainTime }) {
 	return (
 		<div>
-			<Link to={`/products/${product.id}`}>
-				<button type='button'>Go to Detail</button>
-			</Link>
+			{remainTime > 0 ? (
+				<Link to={`/products/${product.id}`}>
+					<button type='button'>Go to Detail</button>
+				</Link>
+			) : (
+				<span>Not Available</span>
+			)}
 		</div>
 	);
 }
@@ -14,5 +18,9 @@ function DetailButton({ product }) {
 export default DetailButton;
 
 DetailButton.propTypes = {
-	product: PropTypes.shape().isRequired,
+	product: PropTypes.shape.isRequired,
+};
+
+DetailButton.propTypes = {
+	remainTime: PropTypes.number.isRequired,
 };

@@ -15,7 +15,7 @@ function HomePage() {
 	return (
 		<div>
 			<NavBar />
-			<h1>Products</h1>
+			<h1 className='home_title'>Products</h1>
 			<div className='home'>
 				{products.map(product => (
 					<ProductCard product={product} key={product.id} />

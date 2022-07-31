@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-function Timer({ time }) {
+function Timer({ time, passTime }) {
 	const [timeLeft, setTimeLeft] = useState(time);
 	const minutes = Math.floor(timeLeft / 60);
 	const seconds = timeLeft - minutes * 60;
@@ -15,6 +15,7 @@ function Timer({ time }) {
 
 		return () => clearInterval(intervalId);
 	}, [timeLeft]);
+	passTime(timeLeft);
 	return (
 		<div>
 			<span className='timer'>
@@ -27,4 +28,8 @@ export default Timer;
 
 Timer.propTypes = {
 	time: PropTypes.number.isRequired,
+};
+
+Timer.propTypes = {
+	passTime: PropTypes.func.isRequired,
 };

@@ -14,7 +14,7 @@ function ProductDetail() {
 		fetchData();
 	}, [product]);
 	return (
-		<div>
+		<div className='detail'>
 			<NavBar />
 			<div className='detail_productCard'>
 				{product.title !== undefined ? (
