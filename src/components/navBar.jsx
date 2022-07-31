@@ -4,7 +4,9 @@ function NavBar() {
 	return (
 		<div className='header__nav'>
 			<span className='header__nav__title'>
-				<strong>Mauro's Store</strong>
+				<strong>
+					Mauro<span>&#39;</span>s Store
+				</strong>
 				<img
 					src='https://iconarchive.com/download/i77853/custom-icon-design/pretty-office-11/shop.ico'
 					alt=''
