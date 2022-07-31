@@ -5,7 +5,11 @@ function NavBar() {
 		<div className='header__nav'>
 			<span className='header__nav__title'>
 				<strong>Fake Store</strong>
-				<img src='./logo192.png' alt='' className='nav-logo' />
+				<img
+					src='https://iconarchive.com/download/i77853/custom-icon-design/pretty-office-11/shop.ico'
+					alt=''
+					className='nav-logo'
+				/>
 			</span>
 			<nav className='header__nav__buttons'>
 				<NavLink to='/'>
