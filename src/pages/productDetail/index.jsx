@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getProduct } from '../../services/products';
-import NavBar from '../../components/navBar';
+import { getProduct } from '../../services/Products';
+import NavBar from '../../components/NavBar';
 
 function ProductDetail() {
 	const [product, setProduct] = useState({});

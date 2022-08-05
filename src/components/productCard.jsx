@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import Timer from './timer';
-import DetailButton from './detailButton';
+import Timer from './Timer';
+import DetailButton from './DetailButton';
 
 function ProductCard({ product }) {
 	const [remainTime, setRemainTime] = useState(0);
