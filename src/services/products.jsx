@@ -7,7 +7,7 @@ export async function getProducts() {
 
 		return x;
 	} catch (error) {
-		return new Error(error);
+		return error;
 	}
 }
 
@@ -17,6 +17,6 @@ export async function getProduct(id) {
 		const x = await response.json();
 		return x;
 	} catch (error) {
-		return new Error(error);
+		return error;
 	}
 }
